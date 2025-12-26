@@ -1,0 +1,243 @@
+/* ---------- Root Theme ---------- */
+:root {
+  --primary: #ff6b35;
+  --primary-dark: #e85a24;
+  --bg: #f6f7fb;
+  --card-bg: #ffffff;
+  --text: #e1edfe;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --danger: #ef4444;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Page ---------- */
+.create-food-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff5f0, #f6f7fb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* ---------- Card ---------- */
+.create-food-card {
+  width: 100%;
+  max-width: 720px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+/* ---------- Header ---------- */
+.create-food-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.create-food-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.create-food-subtitle {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ---------- Form ---------- */
+.create-food-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ---------- Field Group ---------- */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ---------- Inputs ---------- */
+.field-group input[type="text"],
+.field-group textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15);
+}
+
+/* ---------- Hidden File Input ---------- */
+.file-input-hidden {
+  display: none;
+}
+
+/* ---------- Dropzone ---------- */
+.file-dropzone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: #fafafa;
+}
+
+.file-dropzone:hover {
+  border-color: var(--primary);
+  background: #fff3ee;
+}
+
+.file-dropzone-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.file-icon {
+  color: var(--primary);
+}
+
+.file-dropzone-text {
+  font-size: 15px;
+  color: var(--text);
+}
+
+.file-hint {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ---------- Error ---------- */
+.error-text {
+  color: var(--danger);
+  font-size: 13px;
+}
+
+/* ---------- File Chip ---------- */
+.file-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.file-chip-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.file-chip-size {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.file-chip-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+/* ---------- Buttons ---------- */
+.btn-ghost {
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.btn-ghost:hover {
+  text-decoration: underline;
+}
+
+.btn-ghost.danger {
+  color: var(--danger);
+}
+
+/* ---------- Video Preview ---------- */
+.video-preview {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.video-preview-el {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  background: #000;
+}
+
+/* ---------- Actions ---------- */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ---------- Primary Button ---------- */
+.btn-primary {
+  background: var(--primary);
+  color: rgb(24, 21, 21);
+  border: none;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 6px 16px rgba(255, 107, 53, 0.35);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .create-food-card {
+    padding: 20px;
+  }
+
+  .create-food-title {
+    font-size: 24px;
+  }
+
+  .video-preview-el {
+    max-height: 220px;
+  }
+}

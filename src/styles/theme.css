@@ -1,0 +1,39 @@
+/* src/styles/theme.css */
+
+:root {
+  /* Backgrounds */
+  --bg-color: #f6f7f9;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+
+  /* Text */
+  --text-color: #1f2933;
+  --muted-text: #6b7280;
+
+  /* Borders & dividers */
+  --border-color: #e5e7eb;
+
+  /* Brand / Actions */
+  --primary-color: #ff6a3d;   /* warmer, less harsh orange */
+  --color-accent: #2563eb;    /* calm, professional blue */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Backgrounds */
+    --bg-color: #0b0f14;
+    --card-bg: #111827;
+    --input-bg: #0f172a;
+
+    /* Text */
+    --text-color: #e5e7eb;
+    --muted-text: #9ca3af;
+
+    /* Borders */
+    --border-color: #1f2937;
+
+    /* Brand / Actions */
+    --primary-color: #ff8a63;
+    --color-accent: #60a5fa;
+  }
+}
